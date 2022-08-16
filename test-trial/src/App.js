@@ -5,10 +5,11 @@ import { fetchEndpoint } from "./api";
 import ItemCard from "./Components/ItemCard";
 import EventCollection from "./Components/EventCollection";
 import { NavButtons } from "./Components/NavButtons";
+import BackgroundImage from "./background-image.svg";
 
 function App() {
   const [items, setItem] = useState([]);
-  const [options, setOptions] = useState("attractions");
+  const [options, setOptions] = useState([]);
 
   console.log(items);
 
@@ -32,6 +33,13 @@ function App() {
           );
         })}
       </ul>
+      <div className="background-image-container">
+        <img
+          className="background-image"
+          src={BackgroundImage}
+          alt="background image"
+        />
+      </div>
       {/* <ItemCard /> */}
       {/* <EventCollection /> */}
     </div>
